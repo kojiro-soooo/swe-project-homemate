@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Homemate</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+      
+    />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="https://naishare.com/images/favicon.png"
+    />
+
+    <!-- ---------------------------Style Sheet----------------------------------- -->
+    <style media="screen">
+      
+        body { background: #FFEADB; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+
+    </style>
+
+
+    <style>
+
+      .forms-out {
+        margin: 0 auto;
+        font-family: "Montserrat", sans-serif;
+        padding: 15px 0;
+        font-size: 21px;
+        font-weight: bold;
+        max-width: 700px;
+        width: 100%;
+        
+        
+      }
+      .forms-in {
+        width: 100%;
+        background: #FFEADB;
+        font-size: 21px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        margin: 0 auto;
+        padding: 20px 0;
+
+      }
+
+
+      .forms-in div {
+        padding: 30px 20px;
+        max-width: 550px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        height: 480px;
+      }
+
+
+      .forms-in2 div {
+        padding: 30px 20px; 
+        max-width: 900px;
+        margin: 0 auto;
+        background: #FFEADB;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        height: 900px;
+      }
+
+      .forms-in h3 {
+        text-align: center;
+        
+      }
+
+      .forms-in h1 {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Montserrat", sans-serif;
+        padding: 40px 0;
+      }
+
+      .forms-in h2 {
+        text-align: center;
+        font-size: 21px;
+        font-family: "Montserrat", sans-serif;
+        padding: 20px 0;
+      }
+
+      .forms-in input {
+        border: none;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        background: #eeeeee;
+        font-size: 15px;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .forms-in button {
+        border: none;
+        padding: 9px 30px;
+        background: #679B9B;
+        color: #ffffff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+      }
+
+      .forms-in2 button {
+        border: none;
+        padding: 9px 30px;
+        background: #679B9B;
+        color: #ffffff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: "Montserrat", sans-serif;
+        font-size: 17px;
+      }
+
+      .forms-in button:hover {
+        opacity: 0.7;
+      }
+      
+      .hide {
+        display: none;
+      }
+
+      #forgot-password {
+        text-align: center;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      #forgot-password:hover {
+        opacity: 0.7;
+      }
+
+      .form__link {
+        color: #637373;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+
+    }
+
+      .form__link:hover {
+        text-decoration: underline;
+    }
+
+    .topnav {
+        background-color: #679B9B;
+        overflow: hidden;
+    }
+
+        /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background-color: #637373;
+        color: #ffffff;
+    }
+
+        /* Add a color to the active/current link */
+    .topnav a.active {
+        background-color: #ffffffff;
+        color: black;
+    }
+
+
+
+
+
+
+
+
+
+    </style>
+
+ <!-- ---------------------------End of Style Sheet----------------------------------- -->
+
+
+ <!-- ---------------------------Start of Pages----------------------------------- -->
+  </head>
+  <body>
+    <div class="forms-out">
+      <div class="forms-in">
+
+        <div style = "top:100px;" id="home-page">
+            <br>
+            <br>
+            <h3>Welcome to HOMEMATE</h3>
+            <p class="form__text">
+                <br>
+                <br>
+                <center><a class="form__link" href="./" id="linkCreateAccount">Create Account</a></center>
+              </p>
+            <p class="form__text">
+                <center><a class="form__link" href="./" id="linkLogin">Log In</a></center>
+              </p>
+            </div>
+        </div>
+        </div>
+    </body>
+
+    <body onload="showRandomNumber();">
+      <div class="forms-out">
+       <div class="forms-in">
+        <div id="registration-page" class="hide">
+          <button id="show-login">Sign In</button>
+          <h3>Sign Up</h3>
+          Email <br />
+          <input type="email" id="registration-email" /><br />
+          Confirm Email <br />
+          <input
+            type="email"
+            id="registration-reemail"
+            autocomplete="disable"
+          /><br />
+          Password <br />
+          <input type="password" id="registration-password" /><br />
+          <br>
+          <center><button id="register">Sign Up</button></center>
+        </div>
+
+        <div id="login-page" class = "hide">
+          <button id="show-register">Sign Up</button>
+          <h3>Sign In</h3>
+          Email <br />
+          <input type="email" id="login-email" /><br />
+          Password <br />
+          <input type="password" id="login-password" /><br />
+          <p id="forgot-password">Forgot Password</p>
+          <br>
+          <center><button id="login">Sign In</button></center>
+        </div>
+
+        <div id="homepage" class="hide">
+          <button id="signout">Sign Out</button>
+          <br>
+          <br>
+          <h3>HOMEMATE</h3>
+          <p class="form__text">
+            <br>
+            <center><a class="form__link" href="./" id="linkCreateHousehold">Create Household</a></center>
+          </p>
+        <p class="form__text">
+            <center><a class="form__link" href="./" id="linkJoinHousehold">Join Household</a></center>
+          </p>
+        </div>
+
+        
+        <div id="createhousehold" class = "hide">
+            <button id = "show-back1"> Back</button>
+            <center><h1>HOUSEHOLD CODE:</h1></center>
+            <center><input id="username" placeholder="Username"></input></center>
+            <center><button id="button" onclick="myFunction();">Generate Code</button></center>
+            <br>
+            <center><input id="random-number" value="" /></center>
+            
+            <center><button id = "show-create"> Next</button></center>
+                
+        </div>
+        
+
+        <script>
+            function myFunction() {
+                document.getElementById('random-number').value= Math.floor(Math.random()*100000000)
+                document.getElementById("button").disabled = true;
+            }
+        </script>
+
+        <div id="joinhousehold" class = "hide">
+            <center><h1 id = "code">ENTER HOUSEHOLD CODE:</h1></center>
+            <center><input id="username" placeholder="Username"></input></center>
+            <br>
+            <center><input type = "text" placeholder= "Enter Code" id = "codeinput"</center>
+            <br>
+            <br>
+            <center><button id = "show-join" onclick="validateField();" >Join Household</button></center>
+        </div>
+
+        <script>
+            function validateField(){
+                num = document.getElementById('random-number').value;
+                nextnum = document.getElementById('codeinput').value;
+
+                if(nextnum == num){
+                    showHomepage();
+                }
+
+                else if (nextnum != num){
+                    // showJoinHousehold();
+                    alert("codes do not match");
+                    // window.location.reload();
+                }
+            }
+
+        </script>
+
+
+       </div>
+
+       <div class = "forms-in2">
+        <div id="navigationpage" class = "hide">
+            <button id = "signout2"> Sign Out</button> -->
+            <center><h1 id = "code">HOMEMATE</h1></center>
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#Grocery List">Grocery List</a>
+                <a href="#Calendar">Calendar</a>
+                <a href="#Expenses">Expenses</a>
+                <a href="#Chore Chart">Chore Chart</a>
+              </div>
+            
+        </div>
+
+      </div>
+    </div>
+
+<!-- ---------------------------End of Pages----------------------------------- -->
+
+<!-- ---------------------------Start of Scripts----------------------------------- -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<!-- ---------------------------Firebase----------------------------------- -->
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBeoc5Viu6gc-SM_KBf5PU0pNz9R_0kUTs",
+        authDomain: "softeng450650-homemate.firebaseapp.com",
+        databaseURL: "https://softeng450650-homemate-default-rtdb.firebaseio.com",
+        projectId: "softeng450650-homemate",
+        storageBucket: "softeng450650-homemate.appspot.com",
+        messagingSenderId: "972734046821",
+        appId: "1:972734046821:web:b9a59e8899ac1c647d5c8c",
+        measurementId: "G-HZWKV8D60F"
+};
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    //invokes firebase authentication.
+        const auth = firebase.auth();
+        var database = firebase.database();
+        var housecode;
+        function Ready(){
+            username = document.getElementById("username").value;
+            housecode = document.getElementById("random-number").value;
+        }
+        document.getElementById("show-create").onclick = function(){
+            Ready();
+            firebase.database().ref("Household Codes " + username).set({
+                username: username,
+                code_household: housecode
+            })
+        }
+        
+
+
+        document.querySelector("#linkCreateAccount").addEventListener("click", e => {
+            e.preventDefault();
+            showRegistration();       
+        });
+
+
+        document.querySelector("#linkLogin").addEventListener("click", e => {
+            e.preventDefault();
+            showLogin();
+        });
+
+
+        document.querySelector("#show-register").addEventListener("click", () => {
+            showRegistration();
+        });
+
+        const showRegistration = () => {
+            document.querySelector("#registration-page").classList.remove("hide");
+            document.querySelector("#login-page").classList.add("hide");
+            document.querySelector("#homepage").classList.add("hide");
+            document.querySelector("#home-page").classList.add("hide");
+            document.querySelector("#joinhousehold").classList.add("hide");
+            document.querySelector("#createhousehold").classList.add("hide");
+            document.querySelector("#navigationpage").classList.add("hide");
+        };
+
+        document.querySelector("#show-login").addEventListener("click", () => {
+            showLogin();
+        });
+
+        const showLogin = () => {
+            document.querySelector("#registration-page").classList.add("hide");
+            document.querySelector("#login-page").classList.remove("hide");
+            document.querySelector("#homepage").classList.add("hide");
+            document.querySelector("#home-page").classList.add("hide");
+            document.querySelector("#joinhousehold").classList.add("hide");
+            document.querySelector("#createhousehold").classList.add("hide");
+            document.querySelector("#navigationpage").classList.add("hide");
+        };
+
+        document.querySelector("#show-back1").addEventListener("click", () => {
+            showHomepage();
+        });
+
+        document.querySelector("#show-back2").addEventListener("click", () => {
+            showHomepage();
+        });
+
+        document.querySelector("#show-create").addEventListener("click", () => {
+            showNavigation();
+        });
+
+        document.querySelector("#show-join").addEventListener("click", () => {
+            showNavigation();
+        });
+
+        const showNavigation = () => {
+            document.querySelector("#registration-page").classList.add("hide");
+            document.querySelector("#login-page").classList.add("hide");
+            document.querySelector("#homepage").classList.add("hide");
+            document.querySelector("#home-page").classList.add("hide");
+            document.querySelector("#joinhousehold").classList.add("hide");
+            document.querySelector("#createhousehold").classList.add("hide");
+            document.querySelector("#navigationpage").classList.remove("hide");
+        };
+
+
+        document.querySelector("#linkCreateHousehold").addEventListener("click", e => {
+            e.preventDefault();
+            showCreateHousehold();
+
+        });
+
+        const showCreateHousehold = () => {
+            document.querySelector("#registration-page").classList.add("hide");
+            document.querySelector("#login-page").classList.add("hide");
+            document.querySelector("#homepage").classList.add("hide");
+            document.querySelector("#home-page").classList.add("hide");
+            document.querySelector("#joinhousehold").classList.add("hide");
+            document.querySelector("#createhousehold").classList.remove("hide");
+            document.querySelector("#navigationpage").classList.add("hide");
+        };
+
+        document.querySelector("#linkJoinHousehold").addEventListener("click", e => {
+            e.preventDefault();
+            showJoinHousehold();
+        });
+
+        const showJoinHousehold = () => {
+            document.querySelector("#registration-page").classList.add("hide");
+            document.querySelector("#login-page").classList.add("hide");
+            document.querySelector("#homepage").classList.add("hide");
+            document.querySelector("#home-page").classList.add("hide");
+            document.querySelector("#joinhousehold").classList.remove("hide");
+            document.querySelector("#createhousehold").classList.add("hide");
+            document.querySelector("#navigationpage").classList.add("hide");
+        }
+
+        document.querySelector("#signout2").addEventListener("click", () => {
+            signOut();
+        });
+
+
+        document.querySelector("#signout").addEventListener("click", () => {
+            signOut();
+        });
+
+        
+
+        const register = () => {
+        const email = document.querySelector("#registration-email").value;
+        const reemail = document.querySelector("#registration-reemail").value;
+        const password = document.querySelector("#registration-password").value;
+        
+
+        if (email.trim() == "") {
+            alert("Enter Email");
+        } else if (password.trim().length < 7) {
+            alert("Password must be at least 7 characters");
+        } else if (email != reemail) {
+            alert("emails do not match");
+        } else {
+            auth
+            .createUserWithEmailAndPassword(email, password)
+            .catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                alert(errorMessage);
+                // ...
+            });
+        }
+        };
+
+        document.querySelector("#register").addEventListener("click", () => {
+        register();
+        });
+
+        //register when you hit the enter key
+        document
+        .querySelector("#registration-password")
+        .addEventListener("keyup", (e) => {
+            if (event.keyCode === 13) {
+            e.preventDefault();
+
+            register();
+            }
+        });
+
+        const login = () => {
+        const email = document.querySelector("#login-email").value;
+        const password = document.querySelector("#login-password").value;
+
+        if (email.trim() == "") {
+            alert("Enter Email");
+        } else if (password.trim() == "") {
+            alert("Enter Password");
+        } else {
+            authenticate(email, password);
+        }
+        };
+
+        document.querySelector("#login").addEventListener("click", () => {
+        login();
+        });
+
+        //sign in when you hit enter
+        document
+        .querySelector("#login-password")
+        .addEventListener("keyup", (e) => {
+            if (event.keyCode === 13) {
+            e.preventDefault();
+
+            login();
+            }
+        });
+
+        const authenticate = (email, password) => {
+        const auth = firebase.auth();
+        auth.signInWithEmailAndPassword(email, password);
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(email, password)
+            .catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            alert(errorMessage);
+            });
+        };
+
+        const showHomepage = () => {
+        document.querySelector("#registration-page").classList.add("hide");
+        document.querySelector("#login-page").classList.add("hide");
+        document.querySelector("#homepage").classList.remove("hide");
+        document.querySelector("#home-page").classList.add("hide");
+        document.querySelector("#joinhousehold").classList.add("hide");
+        document.querySelector("#createhousehold").classList.add("hide");
+        document.querySelector("#navigationpage").classList.add("hide");
+        };
+
+        const signOut = () => {
+        firebase
+            .auth()
+            .signOut()
+            .then(function () {
+            location.reload();
+            })
+            .catch(function (error) {
+            alert("error signing out, check network connection");
+            });
+        };
+
+        auth.onAuthStateChanged((firebaseUser) => {
+        if (firebaseUser) {
+            showHomepage();
+        }
+        });
+
+        document
+        .querySelector("#forgot-password")
+        .addEventListener("click", () => {
+            const email = document.querySelector("#login-email").value;
+            if (email.trim() == "") {
+            alert("Enter Email");
+            } else {
+            forgotPassword(email);
+            }
+        });
+
+        const forgotPassword = (email) => {
+        auth
+            .sendPasswordResetEmail(email)
+            .then(function () {
+            alert("email sent");
+            })
+            .catch(function (error) {
+            alert("invalid email or bad network connection");
+            });
+        };
+
+  </script>
+</body>
+</html>
